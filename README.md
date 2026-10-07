@@ -81,7 +81,7 @@ docker-practical-assignment/
 └── report/
     └── Docker_Practical_Report.pdf
 
-1. Prerequisites
+## 1. Prerequisites
 
 The following software is required:
 
