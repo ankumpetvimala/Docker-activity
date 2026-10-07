@@ -16,8 +16,6 @@ The application consists of:
        
 ## Project Architecture
 
-```text
-
 docker-activity/
 │
 ├── frontend/
