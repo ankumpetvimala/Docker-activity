@@ -56,8 +56,7 @@ The project was completed as a practical DevOps assignment for a Junior DevOps E
               | postgres-data  |
              +----------------+
 
-## Project Structure
-
+## Project Architecture
 docker-practical-assignment/
 │
 ├── frontend/
