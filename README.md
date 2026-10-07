@@ -39,6 +39,7 @@ docker-activity/
 │   ├── communication.png
 │   └── docker-hub.png
 
+text```
 
 ### 1. Prerequisites
 
