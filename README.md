@@ -17,9 +17,9 @@ The project was completed as a practical DevOps assignment for a Junior DevOps E
 
 ---
 
-## Project Architecture
+Project Architecture
 
-```text
+
                     Browser
                        |
                        v
