@@ -58,6 +58,7 @@ docker-activity/
 
        │   └── docker-hub.png
 
+|
 
 ### 1. Prerequisites
 
