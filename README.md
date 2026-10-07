@@ -17,25 +17,40 @@ The application consists of:
 ## Project Architecture
 
 docker-activity/
+
 │
+
 ├── frontend/
+
 │   ├── Dockerfile
+
 │   ├── nginx.conf
+
 │   └── index.html
+
 │
 ├── backend/
+
 │   ├── Dockerfile
+
 │   ├── package.json
+
 │   └── server.js
 │
 ├── docker-compose.yml
+
 ├── README.md
 │
 ├── screenshots/
+
 │   ├── docker-build.png
+
 │   ├── running-containers.png
+
 │   ├── application.png
+
 │   ├── communication.png
+
 │   └── docker-hub.png
 
 
