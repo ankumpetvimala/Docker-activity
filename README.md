@@ -20,38 +20,43 @@ docker-activity/
 
 │
 
-├── frontend/
+       ├── frontend/
 
-│   ├── Dockerfile
+       │   ├── Dockerfile
 
-│   ├── nginx.conf
+       │   ├── nginx.conf
 
-│   └── index.html
+       │   └── index.html
 
-│
-├── backend/
+       │
+       
+       ├── backend/
 
-│   ├── Dockerfile
+       │   ├── Dockerfile
 
-│   ├── package.json
+       │   ├── package.json
 
-│   └── server.js
-│
-├── docker-compose.yml
+       │   └── server.js
 
-├── README.md
-│
-├── screenshots/
+       │
 
-│   ├── docker-build.png
+       ├── docker-compose.yml
 
-│   ├── running-containers.png
+       ├── README.md
 
-│   ├── application.png
+       │
 
-│   ├── communication.png
+       ├── screenshots/
 
-│   └── docker-hub.png
+       │   ├── docker-build.png
+
+       │   ├── running-containers.png
+
+       │   ├── application.png
+
+       │   ├── communication.png
+
+       │   └── docker-hub.png
 
 
 ### 1. Prerequisites
