@@ -15,7 +15,7 @@ The application consists of:
 
 ## Project Architecture
 
-docker-practical-assignment/
+docker-activity/
 │
 ├── frontend/
 │   ├── Dockerfile
@@ -36,9 +36,7 @@ docker-practical-assignment/
 │   ├── application.png
 │   ├── communication.png
 │   └── docker-hub.png
-│
-└── report/
-    └── Docker_Practical_Report.pdf
+
 
 ### 1. Prerequisites
 
