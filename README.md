@@ -13,9 +13,10 @@ The application consists of:
 - Custom Docker Network – Communication between containers
 - Docker Hub – Container image repository
 
-```text
-         
+       
 ## Project Architecture
+
+```text
 
 docker-activity/
 │
@@ -39,7 +40,6 @@ docker-activity/
 │   ├── communication.png
 │   └── docker-hub.png
 
-```text
 
 ### 1. Prerequisites
 
