@@ -13,50 +13,8 @@ The application consists of:
 - Custom Docker Network – Communication between containers
 - Docker Hub – Container image repository
 
-The project was completed as a practical DevOps assignment for a Junior DevOps Engineer role.
-
----
-
 ## Project Architecture
 
-```text
-
-
-                    Browser
-                       |
-                       v
-              +----------------+
-              |    Frontend    |
-              | Nginx + HTML   |
-              |   Port 8084    |
-              +-------+--------+
-                      |
-                Docker Network
-                      |
-                      v
-              +----------------+
-              |    Backend     |
-              | Node.js +      |
-              |    Express     |
-              |   Port 3000    |
-              +-------+--------+
-                      |
-                Docker Network
-                      |
-                      v
-              +----------------+
-              |    Database    |
-              |   PostgreSQL   |
-              |    Port 5432   |
-              +-------+--------+
-                      |
-                      v
-              +----------------+
-              | Docker Volume  |
-              | postgres-data  |
-             +----------------+
-
-## Project Architecture
 docker-practical-assignment/
 │
 ├── frontend/
@@ -82,7 +40,7 @@ docker-practical-assignment/
 └── report/
     └── Docker_Practical_Report.pdf
 
-## 1. Prerequisites
+### 1. Prerequisites
 
 The following software is required:
 
@@ -92,7 +50,7 @@ Git
 GitHub account
 Docker Hub account
 
-Verify Docker installation:
+**Verify Docker installation:**
 
 docker --version
 
@@ -100,7 +58,7 @@ Verify Docker Compose:
 
 docker compose version
 
-2. Frontend
+## 2. Frontend
 
 The frontend uses Nginx to serve a simple HTML application.
 
@@ -112,13 +70,14 @@ COPY index.html /usr/share/nginx/html/index.html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
+
 Frontend Application
 
 The HTML application provides a button to test communication with the backend and database.
 
 The frontend communicates with the backend through the Nginx reverse proxy.
 
-3. Backend
+## 3. Backend
 
 The backend is developed using Node.js and Express.
 
@@ -139,7 +98,7 @@ CMD ["npm", "start"]
 
 The backend provides API endpoints to verify application and database connectivity.
 
-4. Database
+## 4. Database
 
 PostgreSQL is used as the database.
 
@@ -155,7 +114,7 @@ Password: postgres
 
 For a production application, database credentials should be stored securely using environment variables or Docker secrets rather than being committed to source control.
 
-5. Docker Compose
+## 5. Docker Compose
 
 Docker Compose is used to deploy the complete multi-container application.
 
@@ -179,7 +138,7 @@ Creates the Docker network
 Creates the PostgreSQL volume
 Starts all containers
 
-6. Verify Running Containers
+## 6. Verify Running Containers
 
 Run:
 
@@ -195,7 +154,7 @@ docker-frontend
 docker-backend
 docker-database
 
-7. Access the Application
+## 7. Access the Application
 
 Open the following URL in a browser:
 
@@ -211,7 +170,7 @@ A successful response confirms communication between:
 
 Frontend → Backend → PostgreSQL
 
-8. Docker Network
+## 8. Docker Network
 
 A custom Docker bridge network is configured in Docker Compose.
 
@@ -231,7 +190,7 @@ docker network inspect docker-practical-assignment_app-network
 
 The containers should appear as members of the custom network.
 
-9. Docker Volume
+## 9. Docker Volume
 
 A persistent Docker volume is used for PostgreSQL data.
 
@@ -253,7 +212,7 @@ docker volume inspect docker-practical-assignment_postgres-data
 
 The volume ensures that PostgreSQL data can persist independently of the database container.
 
-10. Docker Images
+## 10. Docker Images
 
 List Docker images:
 
@@ -268,7 +227,7 @@ PostgreSQL uses the official Docker image:
 
 postgres:16-alpine
 
-11. Docker Hub
+## 11. Docker Hub
 
 The custom Docker images can be pushed to Docker Hub.
 
@@ -296,7 +255,8 @@ Docker Hub repository:
 
 https://hub.docker.com/
 
-12. Useful Docker Commands
+## 12. Useful Docker Commands
+
 Build and start containers
 docker compose up -d --build
 Check containers
@@ -316,7 +276,7 @@ docker volume ls
 List networks
 docker network ls
 
-13. Verification
+## 13. Verification
 
 The application was verified using the following checks:
 
@@ -351,7 +311,7 @@ PostgreSQL uses the persistent volume:
 
 postgres-data
 
-14. Screenshots
+## 14. Screenshots
 
 The following screenshots are included as evidence of the implementation:
 
@@ -381,7 +341,7 @@ Shows successful Docker image creation.
 
 screenshots/docker-build.png
 
-15. Implementation Summary
+## 15. Implementation Summary
 
 This project demonstrates the deployment of a three-tier web application using Docker and Docker Compose.
 
