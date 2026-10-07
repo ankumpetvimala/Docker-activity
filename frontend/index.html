@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker Multi-Container Application</title>
+</head>
+
+<body>
+    <h1>Docker Multi-Container Application</h1>
+
+    <p><strong>Frontend:</strong> Nginx</p>
+    <p><strong>Backend:</strong> Node.js + Express</p>
+    <p><strong>Database:</strong> PostgreSQL</p>
+
+    <button onclick="checkBackend()">Check Backend & Database</button>
+
+    <h2>Result:</h2>
+
+    <pre id="result">Click the button to test the application.</pre>
+
+    <script>
+        async function checkBackend() {
+            try {
+                const response = await fetch("/api/health");
+                const data = await response.json();
+
+                document.getElementById("result").textContent =
+                    JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById("result").textContent =
+                    "Connection failed: " + error;
+            }
+        }
+    </script>
+</body>
+</html>
